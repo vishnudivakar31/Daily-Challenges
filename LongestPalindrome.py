@@ -42,3 +42,5 @@ class Solution:
 s = raw_input("Enter the string: ")
 sol = Solution(s)
 print sol.find_longest_palindrome()
+
+
