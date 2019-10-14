@@ -1,18 +1,25 @@
 package edu.njit;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+	    System.out.println(threeSum(new int[] {1, -1, -1, -0}));
     }
 
-    public List<List<Integer>> threeSum(int[] nums) {
+    public static List<List<Integer>> threeSum(int[] nums) {
+        Arrays.sort(nums);
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         List<Integer> triplets = null;
         List<String> tripletCache = new ArrayList<String>();
         int sum = 0;
         for(int i = 0; i < nums.length - 2; i++) {
             sum = nums[i];
+            triplets = null;
             for(int j = i + 1; j < nums.length; j++) {
                 if(triplets == null) {
                     triplets = new ArrayList<Integer>();
